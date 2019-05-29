@@ -33,8 +33,9 @@ init:
 before_build:
   - ps: |
       $openrtm_path = "c:\openrtm\${openrtm}_${Env:cmake_archtecture}"
-      Get-ChildItem "${openrtm_path}\*"
+      "test1"
       if(-NOT (Test-Path "${openrtm_path}\OpenRTM-aist")){
+        "test2"
         New-Item "${openrtm_path}" -ItemType Directory
         [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
         Invoke-WebRequest -Uri $openrtm_url -OutFile "${Env:TEMP}\${openrtm}.msi"
