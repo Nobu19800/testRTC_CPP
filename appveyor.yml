@@ -63,7 +63,7 @@ build_script:
   - ps: $Env:nproc = (Get-WmiObject -Class Win32_Processor).NumberOfLogicalProcessors + 1
   - echo cmake --build ../build -j %nproc% --config Release
   - cmake --build ../build -j %nproc% --config Release
-  - set PATH=..\..\src\Release;%PATH%
+  - set PATH=%CD%\..\build\src\Release;%PATH%
   - echo %PATH%
   - cmake --build ../build --target RUN_TESTS --config Release
 
