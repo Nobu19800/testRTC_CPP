@@ -53,4 +53,4 @@ target_link_libraries(${PROJECT_NAME}Test ${OPENRTM_LIBRARIES} ${PROJECT_NAME})
 
 #add_test(NAME ${PROJECT_NAME}_test COMMAND echo test)
 #add_test(NAME ${PROJECT_NAME}_test COMMAND $<TARGET_FILE:${PROJECT_NAME}Test> -o "manager.components.precreate:${PROJECT_NAME}" -o "manager.components.preconnect:${PROJECT_NAME}0.in?port=${PROJECT_NAME}Test0.in,${PROJECT_NAME}0.out?port=${PROJECT_NAME}Test0.out,${PROJECT_NAME}0.MyServide?port=${PROJECT_NAME}Test0.MyServide" -o "manager.components.preactivation:${PROJECT_NAME}0,${PROJECT_NAME}Test0")
-add_test(NAME ${PROJECT_NAME}_test COMMAND $<TARGET_FILE:${PROJECT_NAME}Test>)
+add_test(NAME ${PROJECT_NAME}_test COMMAND echo $<TARGET_FILE:${PROJECT_NAME}Test>)
