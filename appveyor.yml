@@ -19,13 +19,13 @@ init:
   - ps: $Env:cmake_archtecture
   - ps: |
       if($Env:cmake_archtecture -eq "x64"){
-          $arch = x86_64
+          $arch = "x86_64"
       }
       elseif($Env:cmake_archtecture -eq "x86"){
-          $arch = x86
+          $arch = "x86"
       }
       elseif($Env:cmake_archtecture -eq "arm"){
-          $arch = arm
+          $arch = "arm"
       }
       else{
           throw "invalid architecture"
