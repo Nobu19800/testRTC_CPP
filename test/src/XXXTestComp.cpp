@@ -99,5 +99,34 @@ bool RunTest()
 
 int main (int argc, char** argv)
 {
-return 0;
+  RTC::Manager* manager;
+  manager = RTC::Manager::init(argc, argv);
+  return 0;
+  // Set module initialization proceduer
+  // This procedure will be invoked in activateManager() function.
+  manager->setModuleInitProc(MyModuleInit);
+
+  // Activate manager and register to naming service
+  manager->activateManager();
+
+  // run the manager in blocking mode
+  // runManager(false) is the default.
+  // manager->runManager();
+
+  // If you want to run the manager in non-blocking mode, do like this
+  manager->runManager(true);
+
+  bool ret = RunTest();
+
+  manager->shutdown();
+
+  
+  if (ret)
+    {
+      return 0;
+    }
+  else
+    {
+      return 1;
+    }
 }
