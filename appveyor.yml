@@ -65,7 +65,7 @@ build_script:
   - cmake --build ../build -j %nproc% --config Release
   - set PATH=%CD%\..\build\src\Release;%PATH%
   #- cmake --build ../build --target RUN_TESTS --config Release
-  - %CD%\..\build\test\src\Release\XXXTest.exe
+  - "%CD%\..\build\test\src\Release\XXXTest.exe"
 
 
 cache:
