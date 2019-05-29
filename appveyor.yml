@@ -41,7 +41,7 @@ before_build:
         $msi = Start-Process msiexec.exe -ArgumentList $arg -PassThru
         Wait-Process -Id ($msi.id)
       }
-
+  - set RTM_ROOT=%openrtm_path%\OpenRTM-aist\%openrtm_version%\
   - cmake --version
   - echo cmake -DBUILD_TESTS=ON -DOpenRTM_DIR=%openrtm_path%/OpenRTM-aist/%openrtm_version%/cmake -G "%cmake_generator%" -A "%cmake_archtecture%" -S . -B../build
   - cmake -DOpenRTM_DIR=%openrtm_path%/OpenRTM-aist/%openrtm_version%/cmake -G "%cmake_generator%" -A "%cmake_archtecture%" -S . -B../build
