@@ -38,6 +38,7 @@ before_build:
         [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
         $openrtm_url
         Invoke-WebRequest -Uri $openrtm_url -OutFile "${Env:TEMP}\${openrtm}.msi"
+        Get-ChildItem "${Env:TEMP}\*"
         $arg = "/a `"${Env:TEMP}\${openrtm}.msi`" targetdir=${openrtm_path} /qn  /li `"c:\openrtm\install.log`""
         $msi = Start-Process msiexec.exe -ArgumentList $arg -PassThru
         Wait-Process -Id ($msi.id)
