@@ -42,7 +42,7 @@ before_build:
         $arg = "/a `"${Env:TEMP}\${openrtm}.msi`" targetdir=${openrtm_path} /qn  /li `"c:\openrtm\install.log`""
         $msi = Start-Process msiexec.exe -ArgumentList $arg -PassThru
         Wait-Process -Id ($msi.id)
-        Get-ChildItem "${openrtm_path}\*"
+        Get-ChildItem "${openrtm_path}\OpenRTM-aist\*"
       }
 
   - cmake --version
