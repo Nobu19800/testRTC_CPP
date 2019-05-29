@@ -32,6 +32,7 @@ init:
 
 before_build:
   - ps: |
+      Get-ChildItem "${openrtm_path}\*"
       $openrtm_path = "c:\openrtm\${openrtm}_${Env:cmake_archtecture}"
       if(-NOT (Test-Path "${openrtm_path}\OpenRTM-aist")){
         New-Item "${openrtm_path}" -ItemType Directory
