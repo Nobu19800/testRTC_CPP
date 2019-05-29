@@ -32,8 +32,8 @@ init:
 
 before_build:
   - ps: |
-      Get-ChildItem "${openrtm_path}\*"
       $openrtm_path = "c:\openrtm\${openrtm}_${Env:cmake_archtecture}"
+      Get-ChildItem "${openrtm_path}\*"
       if(-NOT (Test-Path "${openrtm_path}\OpenRTM-aist")){
         New-Item "${openrtm_path}" -ItemType Directory
         [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
