@@ -65,10 +65,7 @@ build_script:
   - cmake --build ../build -j %nproc% --config Release
   - set PATH=%CD%\..\build\src\Release;%PATH%
   - echo %PATH%
-  - dir %CD%\..\build\src\Release
-  - dir %CD%\..\build\test\src\Release
-  - dir C:\openrtm\OpenRTM-aist-1.2.0_x64\OpenRTM-aist\1.2.0\bin\vc141
-  - dir C:\openrtm\OpenRTM-aist-1.2.0_x64\OpenRTM-aist\1.2.0\omniORB\4.2.3_vc141\bin\x86_win32
+  - %CD%\..\build\test\src\Release\XXXTest.exe
   - cmake --build ../build --target RUN_TESTS --config Release
 
 
