@@ -45,6 +45,7 @@ before_build:
         Invoke-WebRequest -Uri $openrtm_url -OutFile "${Env:TEMP}\${openrtm}.msi"
         $arg = "/a `"${Env:TEMP}\${openrtm}.msi`" targetdir=${openrtm_path} /qn  /li `"c:\openrtm\install.log`""
         $msi = Start-Process msiexec.exe -ArgumentList $arg -PassThru
+        Wait-Process -Id ($msi.id)
       }
 
   - cmake --version
