@@ -47,8 +47,6 @@ before_build:
   - cmake -DOpenRTM_DIR=%openrtm_path%/OpenRTM-aist/%openrtm_version%/cmake -G "%cmake_generator%" -A "%cmake_archtecture%" -S . -B../build
 
 build_script:
-  - ps: $Env:nproc = (Get-WmiObject -Class Win32_Processor).NumberOfLogicalProcessors + 1
-  - echo cmake --build ../build -j %nproc% --config Release
   - ps: |
       $vc_types = Get-ChildItem "${Env:openrtm_path}\OpenRTM-aist\${Env:openrtm_version}\bin\*"
       $omni_types = Get-ChildItem "${Env:openrtm_path}\OpenRTM-aist\${Env:openrtm_version}\omniORB\*"
@@ -62,8 +60,10 @@ build_script:
                   $Env:Path = "${omni_type}\bin\x86_win32;${Env:Path}"
           }
       }
-  - set PATH="..\..\src\Release;%PATH%"
+  - ps: $Env:nproc = (Get-WmiObject -Class Win32_Processor).NumberOfLogicalProcessors + 1
+  - echo cmake --build ../build -j %nproc% --config Release
   - cmake --build ../build -j %nproc% --config Release
+  - set PATH="..\..\src\Release;%PATH%"
   - cmake --build ../build --target RUN_TESTS --config Release
 
 
