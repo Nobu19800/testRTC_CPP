@@ -32,17 +32,14 @@ init:
 
 before_build:
   - ps: |
-      $openrtm_path = "c:\openrtm\${openrtm}_${Env:cmake_archtecture}"
-      if(-NOT (Test-Path "${openrtm_path}\OpenRTM-aist")){
-        New-Item "${openrtm_path}" -ItemType Directory
+      $Env:openrtm_path = "c:\openrtm\${openrtm}_${Env:cmake_archtecture}"
+      if(-NOT (Test-Path "${Env:openrtm_path}\OpenRTM-aist")){
+        New-Item "${Env:openrtm_path}" -ItemType Directory
         [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
-        $openrtm_url
         Invoke-WebRequest -Uri $openrtm_url -OutFile "${Env:TEMP}\${openrtm}.msi"
-        Get-ChildItem "${Env:TEMP}\*"
-        $arg = "/a `"${Env:TEMP}\${openrtm}.msi`" targetdir=${openrtm_path} /qn  /li `"c:\openrtm\install.log`""
+        $arg = "/a `"${Env:TEMP}\${openrtm}.msi`" targetdir=${Env:openrtm_path} /qn  /li `"c:\openrtm\install.log`""
         $msi = Start-Process msiexec.exe -ArgumentList $arg -PassThru
         Wait-Process -Id ($msi.id)
-        Get-ChildItem "${openrtm_path}\OpenRTM-aist\*"
       }
 
   - cmake --version
@@ -54,8 +51,8 @@ build_script:
   - echo cmake --build ../build -j %nproc% --config Release
   - cmake --build ../build -j %nproc% --config Release
   - ps: |
-      $vc_types = Get-ChildItem "${openrtm_path}\OpenRTM-aist\${Env:openrtm_version}\bin\*"
-      $omni_types = Get-ChildItem "${openrtm_path}\OpenRTM-aist\${Env:openrtm_version}\omniORB\*"
+      $vc_types = Get-ChildItem "${Env:openrtm_path}\OpenRTM-aist\${Env:openrtm_version}\bin\*"
+      $omni_types = Get-ChildItem "${Env:openrtm_path}\OpenRTM-aist\${Env:openrtm_version}\omniORB\*"
       foreach($vc_type in $vc_types){
           if($vc_type.PSIsContainer){
                   $Env:Path = "${vc_type};${Env:Path}"
