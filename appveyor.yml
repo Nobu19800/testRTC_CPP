@@ -18,17 +18,11 @@ init:
   - ps: $Env:cmake_generator
   - ps: $Env:cmake_archtecture
   - ps: |
-      if($Env:cmake_archtecture -eq "x64"){
-          $arch = "x86_64"
-      }
-      elseif($Env:cmake_archtecture -eq "x86"){
-          $arch = "x86"
-      }
-      elseif($Env:cmake_archtecture -eq "arm"){
-          $arch = "arm"
-      }
-      else{
-          throw "invalid architecture"
+      switch ($Env:cmake_archtecture) {
+        "x64" { $arch = "x86_64" }
+        "x86" { $arch = "x86" }
+        "arm" { $arch = "arm" }
+        default {throw "invalid architecture."}
       }
       $openrtm = "OpenRTM-aist-${Env:openrtm_version}"
       $openrtm_url = "https://github.com/OpenRTM/OpenRTM-aist/releases/download/v${Env:openrtm_version}/${openrtm}-RELEASE_${arch}.msi"
