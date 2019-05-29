@@ -64,6 +64,7 @@ build_script:
   - echo cmake --build ../build -j %nproc% --config Release
   - cmake --build ../build -j %nproc% --config Release
   - set PATH=..\..\src\Release;%PATH%
+  - echo %PATH%
   - cmake --build ../build --target RUN_TESTS --config Release
 
 
