@@ -64,8 +64,8 @@ build_script:
   - echo cmake --build ../build -j %nproc% --config Release
   - cmake --build ../build -j %nproc% --config Release
   - set PATH=%CD%\..\build\src\Release;%PATH%
-  - C:\workspace\build\test\src\Release\XXXTest.exe
-  #- cmake --build ../build --target RUN_TESTS --config Release
+  #- C:\workspace\build\test\src\Release\XXXTest.exe
+  - cmake --build ../build --target RUN_TESTS --config Release
 
 
 cache:
