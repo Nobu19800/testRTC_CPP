@@ -38,11 +38,11 @@ init:
 
 before_build:
   - ps: |
-      if(-NOT (Test-Path "C:/openrtm/${openrtm}")){
-        New-Item C:/openrtm/${openrtm} -ItemType Directory
+      $openrtm_path = "c:\openrtm\${openrtm}_${Env:cmake_archtecture}"
+      if(-NOT (Test-Path "${openrtm_path}\OpenRTM-aist")){
+        New-Item "${openrtm_path}" -ItemType Directory
         [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
         Invoke-WebRequest -Uri $openrtm_url -OutFile "${Env:TEMP}\${openrtm}.msi"
-        $openrtm_path = "c:\openrtm\${openrtm}_${Env:cmake_archtecture}"
         $arg = "/a `"${Env:TEMP}\${openrtm}.msi`" targetdir=${openrtm_path} /qn  /li `"c:\openrtm\install.log`""
         $msi = Start-Process msiexec.exe -ArgumentList $arg -PassThru
       }
