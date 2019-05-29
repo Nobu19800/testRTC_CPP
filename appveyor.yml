@@ -36,7 +36,7 @@ before_build:
       if(-NOT (Test-Path "${openrtm_path}\OpenRTM-aist")){
         New-Item "${openrtm_path}" -ItemType Directory
         [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
-        Get-ChildItem "${openrtm_path}"
+        Get-ChildItem "${openrtm_path}\..\*"
         Invoke-WebRequest -Uri $openrtm_url -OutFile "${Env:TEMP}\${openrtm}.msi"
         $arg = "/a `"${Env:TEMP}\${openrtm}.msi`" targetdir=${openrtm_path} /qn  /li `"c:\openrtm\install.log`""
         $msi = Start-Process msiexec.exe -ArgumentList $arg -PassThru
