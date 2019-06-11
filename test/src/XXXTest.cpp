@@ -155,7 +155,7 @@ RTC::ReturnCode_t XXXTest::onRateChanged(RTC::UniqueId ec_id)
 
 bool XXXTest::runTest()
 {
-    return false;
+    return true;
 }
 
 

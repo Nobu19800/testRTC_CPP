@@ -4,6 +4,5 @@
 import subprocess
 
 
-
-p = subprocess.Popen("C:\\workspace\\build\\test\\src\\Release\\XXXTest.exe")
-p.wait()
+#subprocess.check_call("C:\\Users\\TyouK\\Documents\\GitHub\\build\\test\\src\\Release\\XXXTest.exe")
+subprocess.check_call("C:\\workspace\\build\\test\\src\\Release\\XXXTest.exe")
