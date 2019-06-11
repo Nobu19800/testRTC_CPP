@@ -99,11 +99,9 @@ bool RunTest()
 
 int main (int argc, char** argv)
 {
-  std::cout << "aaaa:" << argc << std::endl;
-  return 1;
   RTC::Manager* manager;
   manager = RTC::Manager::init(argc, argv);
-
+  return 1;
   // Set module initialization proceduer
   // This procedure will be invoked in activateManager() function.
   manager->setModuleInitProc(MyModuleInit);
