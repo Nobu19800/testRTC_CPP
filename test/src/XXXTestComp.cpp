@@ -99,8 +99,8 @@ bool RunTest()
 
 int main (int argc, char** argv)
 {
-  try{
   RTC::Manager* manager;
+  try{
   manager = RTC::Manager::init(argc, argv);
   }
   catch(...)
