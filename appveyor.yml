@@ -70,3 +70,4 @@ only_commits:
     - include/
     - src/
     - test/
+    - test.py
