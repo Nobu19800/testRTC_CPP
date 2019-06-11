@@ -50,7 +50,7 @@ before_build:
 build_script:
   - ps: |
       $Env:Path = "${Env:openrtm_path}\OpenRTM-aist\${Env:openrtm_version}\bin\vc141;${Env:Path}"
-      $Env:Path = "${Env:openrtm_path}\OpenRTM-aist\${Env:openrtm_version}\omniORB\4.2.3_vc141\;bin\x86_win32;${Env:Path}"
+      $Env:Path = "${Env:openrtm_path}\OpenRTM-aist\${Env:openrtm_version}\omniORB\4.2.3_vc141\bin\x86_win32;${Env:Path}"
   - ps: $Env:nproc = (Get-WmiObject -Class Win32_Processor).NumberOfLogicalProcessors + 1
   - echo cmake --build ../build -j %nproc% --config Release
   - cmake --build ../build -j %nproc% --config Release
