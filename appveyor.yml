@@ -53,6 +53,7 @@ build_script:
       $omni_types = Get-ChildItem "${Env:openrtm_path}\OpenRTM-aist\${Env:openrtm_version}\omniORB\*"
       foreach($vc_type in $vc_types){
           if($vc_type.PSIsContainer){
+                  $Env:Path = "${vc_type};${Env:Path}"
           }
       }
       foreach($omni_type in $omni_types){
