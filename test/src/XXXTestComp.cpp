@@ -99,6 +99,7 @@ bool RunTest()
 
 int main (int argc, char** argv)
 {
+  std::cout << "aaaa:" << argc << std::endl;
   RTC::Manager* manager;
   manager = RTC::Manager::init(argc, argv);
 
