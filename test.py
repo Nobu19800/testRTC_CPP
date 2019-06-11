@@ -1,12 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: euc-jp -*-
 
-print("aaaaabbbbb")
-import os
-import sys
-
-with open("test.txt", mode='w') as f:
-    f.write(str(os.environ["PATH"]))
-    f.write(str(sys.argv))
+import subprocess
 
 
+
+p = subprocess.Popen("C:\\workspace\\build\\test\\src\\Release\\XXXTest.exe")
+p.wait()
