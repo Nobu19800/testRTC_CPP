@@ -65,7 +65,6 @@ build_script:
   - echo cmake --build ../build -j %nproc% --config Release
   - cmake --build ../build -j %nproc% --config Release
   - set PATH=%CD%\..\build\src\Release;%PATH%
-  #- C:\workspace\build\test\src\Release\XXXTest.exe -o logger.enable:YES -o logger.file_name:stdout
   - echo cmake --build ../build --target RUN_TESTS --config Release
   - cmake --build ../build --target RUN_TESTS --config Release
 
