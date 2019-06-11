@@ -100,13 +100,8 @@ bool RunTest()
 int main (int argc, char** argv)
 {
   RTC::Manager* manager;
-  try{
   manager = RTC::Manager::init(argc, argv);
-  }
-  catch(...)
-  {
-  }
-  return 0;
+
   // Set module initialization proceduer
   // This procedure will be invoked in activateManager() function.
   manager->setModuleInitProc(MyModuleInit);
