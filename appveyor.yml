@@ -4,6 +4,7 @@ platform:
 - x64
 environment:
   openrtm_version: 1.2.0
+  CTEST_OUTPUT_ON_FAILURE: 1
   matrix:
     - cmake_generator: Visual Studio 15 2017
       cmake_archtecture: x64
@@ -65,6 +66,7 @@ build_script:
   - cmake --build ../build -j %nproc% --config Release
   - set PATH=%CD%\..\build\src\Release;%PATH%
   #- C:\workspace\build\test\src\Release\XXXTest.exe
+  - echo cmake --build ../build --target RUN_TESTS --config Release
   - cmake --build ../build --target RUN_TESTS --config Release
 
 
