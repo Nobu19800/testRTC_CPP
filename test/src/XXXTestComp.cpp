@@ -99,6 +99,15 @@ bool RunTest()
 
 int main (int argc, char** argv)
 {
+  CORBA::ORB_var orb = CORBA::ORB_init(argc, argv);
+
+    // Obtain a reference to the root POA.
+  CORBA::Object_var       obj = orb->resolve_initial_references("RootPOA");
+  PortableServer::POA_var poa = PortableServer::POA::_narrow(obj);
+  PortableServer::POAManager_var pman = poa->the_POAManager();
+  pman->activate();
+  orb->destroy();
+  /*
   RTC::Manager* manager;
   manager = RTC::Manager::init(argc, argv);
 
@@ -129,4 +138,6 @@ int main (int argc, char** argv)
     {
       return 1;
     }
+  */
+  return 0;
 }
