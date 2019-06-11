@@ -57,6 +57,7 @@ build_script:
       }
       foreach($omni_type in $omni_types){
           if($omni_type.PSIsContainer){
+                  $Env:Path = "${omni_type}\bin\x86_win32;${Env:Path}"
           }
       }
   - ps: $Env:nproc = (Get-WmiObject -Class Win32_Processor).NumberOfLogicalProcessors + 1
