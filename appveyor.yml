@@ -55,10 +55,9 @@ build_script:
   - echo cmake --build ../build -j %nproc% --config Release
   - cmake --build ../build -j %nproc% --config Release
   - set PATH=%CD%\..\build\src\Release;%PATH%
-  - set PATH=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\10\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;%PATH%
-  - C:\workspace\build\test\src\Release\XXXTest.exe -o logger.enable:YES -o logger.file_name:stdout
+  #- C:\workspace\build\test\src\Release\XXXTest.exe -o logger.enable:YES -o logger.file_name:stdout
   - echo cmake --build ../build --target RUN_TESTS --config Release
-  #- cmake --build ../build --target RUN_TESTS --config Release
+  - cmake --build ../build --target RUN_TESTS --config Release
 
 
 cache:
