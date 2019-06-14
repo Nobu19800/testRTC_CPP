@@ -1,12 +1,12 @@
 Conan C/C++ Package Managerの使い方のメモ
 
-** Conanのインストール
+## Conanのインストール
 
 ```
 pip install conan
 ```
 
-** 自作モジュールのビルド
+## 自作モジュールのビルド
 CMakeLists.txtには以下のような内容を記述する。
 `conan_basic_setup`を実行すると自動的に全てのインクルードディレクトリ、リンクディレクトリが設定される。
 `${CONAN_LIBS}`には依存するすべてのライブラリが含まれる。
@@ -42,7 +42,7 @@ cmake .
 ```
 
 
-** パッケージの作成、テスト
+## パッケージの作成、テスト
 以下のコマンドでサンプルを作成できる。
 ```
 conan new Hello/0.1 -t
@@ -54,7 +54,7 @@ conan new Hello/0.1 -t
 conan create . demo/testing
 ```
 
-** パッケージのアップロード
+## パッケージのアップロード
 今回は[JFlog Bintray](https://bintray.com)を使用する。
 
 まずはサインインを行う。
