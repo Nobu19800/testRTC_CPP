@@ -103,3 +103,10 @@ conan upload "*" -r <リモート名> --all
 [requires]
 testRTC/0.1@demo/testing
 ```
+
+単体でインストールしたい場合は以下のコマンドを実行する。
+
+
+```
+conan install testRTC/0.1@demo/testing
+```
