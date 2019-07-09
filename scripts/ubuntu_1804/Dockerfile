@@ -19,4 +19,4 @@ RUN apt-get update\
 
 COPY testRTC_CPP /root/testRTC_CPP
 WORKDIR /root/testRTC_CPP
-RUN mkdir build && cd build && cmake .. && make && make install & make package
+RUN mkdir build && cd build && cmake .. && make && make install & cpack
