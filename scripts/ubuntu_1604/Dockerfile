@@ -10,7 +10,8 @@ RUN apt-get update\
  omniidl\
  doxygen\
  nkf\
- gnupg\
+ gnupg2\
+ python\
  && export repo="http://openrtm.org/pub/Linux/ubuntu/ xenial"\
  && echo "deb $repo main" | tee -a /etc/apt/sources.list\
  && apt-key adv --keyserver keys.gnupg.net --recv-keys 4BCE106E087AFAC0\
