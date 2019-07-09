@@ -56,7 +56,7 @@ function(get_pkgmgr ARG0)
 endfunction(get_pkgmgr)
 
 get_dist(DIST_NAME)
-MESSAGE(STATUS "Distribution is ${DIST_NAME}")
+message(STATUS "Distribution is ${DIST_NAME}")
 
 get_pkgmgr(PKGMGR)
 if(PKGMGR AND NOT LINUX_PACKAGE_GENERATOR)
