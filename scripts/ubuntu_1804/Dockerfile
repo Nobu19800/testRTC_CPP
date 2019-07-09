@@ -20,4 +20,4 @@ RUN apt-get update\
 
 COPY testRTC_CPP /root/testRTC_CPP
 WORKDIR /root/testRTC_CPP
-RUN mkdir build && cd build && cmake .. -DBUILD_DOCUMENTATION=ON && make && make install && cpack
+RUN mkdir build && cd build && cmake .. -DBUILD_DOCUMENTATION=ON -DBUILD_TESTS=ON && make && make install && cpack
