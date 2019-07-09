@@ -5,8 +5,6 @@ RUN apt-get update\
  g++\
  make\
  cmake\
- uuid-dev\
- libboost-filesystem-dev\
  omniorb-nameserver\
  libomniorb4-dev\
  omniidl\
