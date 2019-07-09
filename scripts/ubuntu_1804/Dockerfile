@@ -12,8 +12,8 @@ RUN apt-get update\
  nkf\
 # gnupg\
  wget\
- && wget https://raw.githubusercontent.com/OpenRTM/OpenRTM-aist/master/scripts/pkg_install_ubuntu.sh
- && sh pkg_install_ubuntu.sh
+ && wget https://raw.githubusercontent.com/OpenRTM/OpenRTM-aist/master/scripts/pkg_install_ubuntu.sh\
+ && sh pkg_install_ubuntu.sh\
 # && export repo="http://openrtm.org/pub/Linux/ubuntu/ bionic"\
 # && echo "deb $repo main" | tee -a /etc/apt/sources.list\
 # && apt-key adv --keyserver keys.gnupg.net --recv-keys 4BCE106E087AFAC0\
