@@ -12,6 +12,7 @@ RUN apt-get update\
  nkf\
  && export repo="http://openrtm.org/pub/Linux/ubuntu/ bionic"\
  && echo "deb $repo main" | tee -a /etc/apt/sources.list\
+ && apt-key adv --keyserver keys.gnupg.net --recv-keys 4BCE106E087AFAC0\
  && apt-get -qq update\
  && apt-get install -y --force-yes openrtm-aist-dev\
  && apt-get clean\
