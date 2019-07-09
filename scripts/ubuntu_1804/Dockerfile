@@ -10,6 +10,7 @@ RUN apt-get update\
  omniorb-nameserver\
  libomniorb4-dev\
  omniidl\
+ nkf\
  && export repo="http://openrtm.org/pub/Linux/ubuntu/ bionic"\
  && echo "deb $repo main" | tee -a /etc/apt/sources.list\
  && apt-get -qq update\
@@ -19,4 +20,4 @@ RUN apt-get update\
 
 COPY testRTC_CPP /root/testRTC_CPP
 WORKDIR /root/testRTC_CPP
-RUN mkdir build && cd build && cmake .. && make && make install && cpack
+RUN mkdir build && cd build && cmake .. -DBUILD_DOCUMENTATION=ON && make && make install && cpack
