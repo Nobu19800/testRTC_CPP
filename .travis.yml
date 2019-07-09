@@ -17,20 +17,6 @@ addons:
     packages:
       - docker-ce
 
-matrix:
-  include:
-    # Ubuntu16.04 + Latest OpenRTM-aist
-    - os: linux
-      dist: xenial
-      compiler: gcc
-      env: repo="http://openrtm.org/pub/Linux/ubuntu/ xenial"
-    # Ubuntu18.04 + Latest OpenRTM-aist
-    - os: linux
-      dist: bionic
-      compiler: gcc
-      env: repo="http://openrtm.org/pub/Linux/ubuntu/ bionic"
-
-
 
 env:
   - TARGET_DIST=ubuntu TARGET_VER=1804
