@@ -10,6 +10,10 @@ RUN apt-get update\
  omniorb-nameserver\
  libomniorb4-dev\
  omniidl\
+ && export repo="http://openrtm.org/pub/Linux/ubuntu/ bionic"\
+ && echo "deb $repo main" | sudo tee -a /etc/apt/sources.list\
+ && sudo apt-get -qq update\
+ && sudo apt-get install -y --force-yes openrtm-aist-dev\
  && apt-get clean\
  && rm -rf /var/lib/apt/lists/*
 
