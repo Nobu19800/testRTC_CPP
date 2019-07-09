@@ -10,6 +10,7 @@ RUN apt-get update\
  omniorb-nameserver\
  libomniorb4-dev\
  omniidl\
+ doxygen\
  nkf\
  && export repo="http://openrtm.org/pub/Linux/ubuntu/ xenial"\
  && echo "deb $repo main" | tee -a /etc/apt/sources.list\
