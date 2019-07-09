@@ -10,7 +10,7 @@ RUN apt-get update\
  omniidl\
  doxygen\
  nkf\
-# gnupg\
+ gnupg2\
  wget\
  && wget --no-check-certificate https://raw.githubusercontent.com/OpenRTM/OpenRTM-aist/master/scripts/pkg_install_ubuntu.sh\
  && sh pkg_install_ubuntu.sh\
