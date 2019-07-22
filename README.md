@@ -21,7 +21,7 @@
 
 ![](Sample.png "Title")
 
-(ここにRTCの画像を表示)
+<!-- ここにRTCの画像を表示-->
 <!-- Build Viewの画像をRTC Builderで出力する。画像ファイル名を上記のように入力-->
 
 |  |  |
