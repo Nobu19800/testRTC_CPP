@@ -128,7 +128,7 @@
     <td colspan="3">(Interface)</td>
   </tr>
   <tr>
-    <td rowspan="4">(サービスポートタブ->インターフェース名)</td>
+    <td rowspan="9">(サービスポートタブ->インターフェース名)</td>
     <td>Type</td>
     <td>(サービスポートタブ->インターフェース型)</td>
     <tr>
