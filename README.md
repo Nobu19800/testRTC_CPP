@@ -1,4 +1,4 @@
-# RTComponent: (基本タブ->モジュール名) specificatioin
+# (基本タブ->モジュール名)
 
 
 ## Overview
