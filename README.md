@@ -230,8 +230,9 @@
 ## Setup
 <!-- インストール手順を記述する。 -->
 
-- Windows
-- Ubuntu
+### Windows
+
+### Ubuntu
 
 ## Usage
 <!-- 使用方法を記述する。 -->
