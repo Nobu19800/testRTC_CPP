@@ -229,6 +229,14 @@
 
 ## Setup
 <!-- インストール手順を記述する。 -->
+<!-- 現状のCMake、Visual Studio(もしくはmake)を直接実行する方法ではなく、PyPi、Conan、vcpkg、Maven、LuaRocks等のパッケージマネージャへの対応を考える。
+RTC Builderでパッケージマネージャ登録に必要なファイルを生成する。
+- C++：Conan(conanfile.txt、conanfile.py)
+- Python：pypi(setup.py、MANIFEST.in、requirements.txt)
+- Java：Maven(pom.xml)
+- Lua：LuaRocks(.rockspec)
+-->
+
 
 ### Windows
 
