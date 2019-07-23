@@ -15,7 +15,7 @@ RUN apt-get update\
  && export repo="http://openrtm.org/pub/Linux/ubuntu/ bionic"\
  && echo "deb $repo main" | tee -a /etc/apt/sources.list\
  && apt-key export OpenRTM-aist > openrtm.pub\
- && apt-key add openrtm.pub
+ && apt-key add openrtm.pub\
  && apt-get autoclean\
  && apt-get -qq update\
  && apt-get install -y --force-yes openrtm-aist-dev\
