@@ -212,8 +212,14 @@
   </tr>
 </table>
 
+### RT-Component Configuration Parameter
 
-<!-- RT-Component Configuration Parameterは何のために存在しているのか不明 -->
+<!-- (コンフィギュレーションタブ->RT-Component Configuration Parameter)の内容を表に記述 -->
+
+| Configuration | Default Value |
+----|---- 
+| |  |
+
 
 ## Demo
 <!-- 動作例の説明、デモの動画のURL等をユーザーが自分で記述する。 -->
