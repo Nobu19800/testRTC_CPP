@@ -125,7 +125,7 @@
     <td colspan="2">(サービスポートタブ->I/F概要説明)</td>
   </tr>
   <tr>
-    <td colspan="3">(Interface)</td>
+    <td colspan="3">Interface</td>
   </tr>
   <tr>
     <td rowspan="9">(サービスポートタブ->インターフェース名)</td>
