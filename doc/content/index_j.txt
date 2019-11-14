@@ -111,7 +111,21 @@ XXXは ``XXXComp`` を実行（ ``${prefix}/components/bin`` に
 in              InPort      RTC::TimedLong                 
 out             OutPort     RTC::TimedLong                 
 myservice0      ServicePort SimpleService::MyService       
+(FSMタブ->ポート名) EventPort 
 =============== =========== ============================== ====
+
+状態
+=====
+
+=============== =========== ==============================
+状態名           イベント名  遷移先                  
+=============== =========== ==============================
+node1           event1      node2                 
+node2           event2      node4           
+                event3      node3
+node3                       node4 
+node4           Final State 
+=============== =========== ==============================
 
 例
 ==
