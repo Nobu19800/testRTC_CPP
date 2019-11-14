@@ -78,7 +78,7 @@
 | FSM Type | (StaticFSM or DynamicFSM) |
 
 <!-- Nodeの一覧を記述する -->
-#### Node lists
+#### Node list
 
 <table>
   <tr>
@@ -122,7 +122,7 @@
 
 
 <!-- Eventの一覧を記述する -->
-#### Event lists
+#### Event list
 
 ##### (FSMタブ->イベントリスト->イベント名)
 
