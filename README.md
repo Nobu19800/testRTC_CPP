@@ -74,7 +74,7 @@
 
 |  |  |
 ----|---- 
-| Port Name | (基本タブ->モジュール名) |
+| Port Name | (FSMタブ->ポート名) |
 | FSM Type | (StaticFSM or DynamicFSM) |
 
 <!-- Nodeの一覧を記述する -->
