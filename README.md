@@ -74,8 +74,52 @@
 
 |  |  |
 ----|---- 
-| Port Name | (基本タブ->モジュール名) |
+| Port Name | (FSMタブ->ポート名) |
 | FSM Type | (StaticFSM or DynamicFSM) |
+
+<!-- Nodeの一覧を記述する -->
+#### Node lists
+
+<table>
+  <tr>
+    <td>State Name</td>
+    <td>Event Name</td>
+    <td>Target State</td>
+  </tr>
+  <!-- 以下にノードの情報を記述する-->
+  <!-- 図のようにnode1を遷移元とするイベントが1つの場合は、以下のように|ノード名|イベント名|遷移先|と記述する-->
+  <tr>
+    <td>node1</td>
+    <td>event1</td>
+    <td>node2</td>
+  </tr>
+  <!-- 図のようにnode2を遷移元とするイベントが複数の場合は、以下のようにイベント名を複数行に記述する-->
+  <tr>
+    <!-- rowspan="2"にはイベントの数を入力する-->
+    <td rowspan="2">node2</td>
+    <!-- 1つめのイベントは以下の位置に記載する-->
+    <td>event2</td>
+    <td>node4</td>
+  </tr>
+  <!-- 2つめのイベントは以下のように記載する-->
+  <tr>
+    <td>event3</td>
+    <td>node3</td>
+  </tr>
+  <tr>
+    <td>node3</td>
+    <td></td>
+    <td>node4</td>
+  </tr>
+  <!-- 終了状態の場合は以下のようにFinal Stateと記述する-->
+  <tr>
+    <td>node4</td>
+    <td colspan="2">Final State</td>
+  </tr>
+</table>
+  
+
+
 
 <!-- Eventの一覧を記述する -->
 #### Event lists
