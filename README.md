@@ -77,6 +77,38 @@
 | Port Name | (基本タブ->モジュール名) |
 | FSM Type | (StaticFSM or DynamicFSM) |
 
+<!-- Nodeの一覧を記述する -->
+#### Node lists
+
+<table>
+  <tr>
+    <td>State Name</td>
+    <td>Event Name</td>
+    <td>Target State</td>
+  </tr>
+  <tr>
+    <td rowspan="2">node2</td>
+    <td>event2</td>
+    <td>node4</td>
+  </tr>
+  <tr>
+    <td>event3</td>
+    <td>node3</td>
+  </tr>
+  <tr>
+    <td>node3</td>
+    <td></td>
+    <td>node4</td>
+  </tr>
+  <tr>
+    <td>node4</td>
+    <td colspan="2">Final State</td>
+  </tr>
+</table>
+  
+
+
+
 <!-- Eventの一覧を記述する -->
 #### Event lists
 
