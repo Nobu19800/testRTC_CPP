@@ -65,13 +65,63 @@
   </tr>
 </table>
 
+
+### EventPorts definition
+<!-- FSNのチェックボックスがオフの場合は何も記述しない-->
+
+![](FSM.png "FSM")
+
+
+|  |  |
+----|---- 
+| Port Name | (基本タブ->モジュール名) |
+| FSM Type | (StaticFSM or DynamicFSM) |
+
+<!-- Eventの一覧を記述する -->
+#### Event lists
+
+##### (FSMタブ->イベントリスト->イベント名)
+
+(FSMタブ->イベントリスト->概要説明)
+
+<table>
+  <tr>
+    <td>Source State</td>
+    <td colspan="2">(FSMタブ->イベントリスト->遷移元)</td>
+  </tr>
+  <tr>
+    <td>Target State</td>
+    <td colspan="2">(FSMタブ->イベントリスト->遷移先)</td>
+  </tr>
+  <tr>
+    <td>DataType</td>
+    <td>(FSMタブ->イベントリスト->データ型)</td>
+    <td>(FSMタブ->イベントリスト->データ型(Documentation))</td>
+  </tr>
+  <tr>
+    <td>Number of Data</td>
+    <td colspan="2">(FSMタブ->イベントリスト->データ型)</td>
+  </tr>
+  <tr>
+    <td>Unit</td>
+    <td colspan="2">(FSMタブ->イベントリスト->単位)</td>
+  </tr>
+  <tr>
+    <td>Operational frecency Period</td>
+    <td colspan="2">(FSMタブ->イベントリスト->処理頻度、周期)</td>
+  </tr>
+</table>
+
+(FSMタブ->イベントリスト->詳細説明)
+
 ### InPorts definition
 
+<!-- InPortの一覧を表で記述する -->
 #### (データポートタブ->ポート名)
 
 (データポートタブ->概要説明)
 
-<!-- InPortの一覧を表で記述する -->
+
 
 <table>
   <tr>
